@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/dreams/dream-index.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>DREAMS</h1>
+</section>
+
+<section class="card-container">
+  {% for dream in dreams %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+
+        </div>
+        <h2 class="card-title">{{ dream.title }}</h2>
+          <p>A {{ dream.type }} dream.</p>
+        <p><small>{{ dream.description }}</small></p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
