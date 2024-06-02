@@ -18,14 +18,16 @@
 <section class="card-container">
   {% for dream in dreams %}
     <div class="card">
-      <div class="card-content">
-        <div class="card-img-container">
-
+      <a href="{% url 'dream-detail' dream.id %}">
+        <div class="card-content">
+          <div class="card-img-container">
+            
+          </div>
+          <h2 class="card-title">{{ dream.title }}</h2>
+          <p>Type of dream: {{ dream }}.</p>
+          <p><small>{{ dream.description }}</small></p>
         </div>
-        <h2 class="card-title">{{ dream.title }}</h2>
-          <p>A {{ dream.type }} dream.</p>
-        <p><small>{{ dream.description }}</small></p>
-      </div>
+      </a>
     </div>
   {% endfor %}
 </section>

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/dreams/dream-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="cat-container">
+  <div class="cat-img">
+
+  </div>
+
+  <div class="dream-details">
+    <h1>{{ dream.title }}</h1>
+    <h2>{{ dream.date }}</h2>
+    <h2>Type of Dream: {{ dream }}.</h2>
+
+    <p>{{ dream.description }}</p>
+  </div>
+</section>
+
+{% endblock %}

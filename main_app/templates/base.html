@@ -28,9 +28,8 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/dreams">My Dreams</a></li>
-        <li><a href="/dreams/create">Log a Dream</a></li>
+        <li><a href="{% url 'dream-index' %}">My Dreams</a></li>
+        <li><a href="{% url 'dream-create' %}">Log a Dream</a></li>
       </ul>
     </nav>
   </header>
