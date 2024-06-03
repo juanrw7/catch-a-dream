@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+<link 
+  href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css" 
+  rel="stylesheet" 
+/>
+<link rel="stylesheet" href="{% static 'css/mcdp.css' %}">
+<script 
+  src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js"
+>
+</script>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}"/>
+
+<script defer src="{% static 'js/dream-form.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  {% if object %}
+    <h1>Edit Your Dream</h1>
+  {% else %}
+    <h1>Log Your Dream</h1>
+  {% endif %}
+
+</div>
+
+<form action="" method="post" class="form-container">
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+  </table>
+  <button type="submit" class="btn submit">Add</button>
+</form>
+
+{% endblock %}

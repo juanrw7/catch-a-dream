@@ -19,9 +19,14 @@
   <div class="dream-details">
     <h1>{{ dream.title }}</h1>
     <h2>{{ dream.date }}</h2>
-    <h2>Type of Dream: {{ dream }}.</h2>
+    <h2>Type of Dream: {{ dream.str_type }}.</h2>
 
     <p>{{ dream.description }}</p>
+
+    <div class="dream-actions">
+      <a href="{% url 'dream-update' dream.id %}">Edit</a>
+      <a href="{% url 'dream-delete' dream.id %}">Delete</a>
+    </div>
   </div>
 </section>
 
