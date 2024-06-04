@@ -78,6 +78,8 @@
   border: 2px solid goldenrod;
 }
 
+
+/* css used only in confirm delete  */
 .danger {
   margin-top: 0;
 }
@@ -91,6 +93,7 @@
 .title{
   text-align: center;
 }
+/* css used only in confirm delete  */
 
 
 @media only screen and (max-width: 580px) { 
