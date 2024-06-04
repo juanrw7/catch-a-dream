@@ -32,3 +32,6 @@ class Dream(models.Model):
   def get_absolute_url(self):
       return reverse("dream-detail", kwargs={"dream_id": self.id})
   
+  class Meta:
+    ordering = ['-date']
+  

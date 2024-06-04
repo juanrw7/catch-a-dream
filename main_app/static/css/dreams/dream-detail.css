@@ -1,0 +1,72 @@
+.dream-container {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dream-details {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 25px;
+  background-color: #dcd7d3;
+  border-radius: 4px;
+  box-shadow: 0 0 15px  #dcd7d3;
+}
+
+.dream-details > h1 {
+  font-size: 30px;
+  margin: 35px 0 20px 0;
+  border-bottom: 2px solid black;
+}
+
+.dream-details > h2 {
+  font-size: 20px;
+  margin: 0 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dream-details > p {
+  font-size: 18px;
+}
+
+.dream-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.dream-actions > a {
+  width: 80px;
+  padding: 4px 0;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #f5ebe0;
+
+  /* background-color: #d6ccc2; */
+  border: 2px solid rgba(0, 0, 0, 0.268);
+  text-align: center;
+
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+
+.dream-actions > a:hover { 
+  background-color: white;
+}
+
+
+
+
+@media only screen and (max-width: 550px) {  
+
+  .dream-details {
+    width: 75%;
+  }
+
+}

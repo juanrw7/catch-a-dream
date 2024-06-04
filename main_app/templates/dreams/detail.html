@@ -11,15 +11,15 @@
 
 {% block content %}
 
-<section class="cat-container">
+<section class="dream-container">
   <div class="cat-img">
 
   </div>
 
   <div class="dream-details">
+    <h2><span>Type of Dream:</span> <span>{{ dream.str_type }}</span></h2>
     <h1>{{ dream.title }}</h1>
     <h2>{{ dream.date }}</h2>
-    <h2>Type of Dream: {{ dream.str_type }}.</h2>
 
     <p>{{ dream.description }}</p>
 

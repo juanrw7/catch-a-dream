@@ -12,24 +12,29 @@
 {% block content %}
 
 <section class="page-header">
-  <h1>DREAMS</h1>
+  <h1>YOUR DREAMS</h1>
 </section>
 
-<section class="card-container">
+<div class="card-container">
   {% for dream in dreams %}
     <div class="card">
       <a href="{% url 'dream-detail' dream.id %}">
         <div class="card-content">
-          <div class="card-img-container">
-            
+          <div class="dream-info">
+            <h2 class="card-title">{{ dream.title }}</h2>
+            <p>Type of dream: {{ dream.str_type }}.</p>
+            <p><small>{{ dream.date }}</small></p>
           </div>
-          <h2 class="card-title">{{ dream.title }}</h2>
-          <p>Type of dream: {{ dream.str_type }}.</p>
-          <p><small>{{ dream.date }}</small></p>
+          <div class="card-img-container">
+            <img 
+            src="{% static "images/dreamcatcher4.png" %}"
+            alt="Catch-a-Dream Logo"
+            >
+          </div>
         </div>
       </a>
     </div>
   {% endfor %}
-</section>
+  </div>
 
 {% endblock %}

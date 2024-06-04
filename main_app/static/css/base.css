@@ -1,9 +1,13 @@
 html {
   background-color: #f5ebe0;
+  /* overflow-x: hidden; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
+    'Helvetica Neue', sans-serif;
 }
 
 body {
-  margin: 0;
+  margin: 125px 0 100px 0;
 }
 
 /* main {
@@ -23,6 +27,18 @@ header {
   height: 100px;
   background-color: #d6ccc2;
   padding: 0 7px;
+  position: fixed;
+  top: 0px;
+  border-bottom: 2px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited{
+  color: black;
 }
 
 nav {
@@ -34,21 +50,74 @@ nav {
 }
 
 ul {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 50px 0 0;
   padding: 0;
   list-style-type: none;
+  height: 100px;
 }
 
-a, li{
+.header-logo-container > a, li{
   margin-right: 20px;
   margin-top: 4px;
   margin-bottom: 4px;
 }
 
-a {
-  text-decoration: none;
+.header-logo-container > a {
+  display: flex;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  margin: 0;
+}
+
+.header-logo-container {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  border: 2px solid black;
+}
+
+.header-logo-container > a > img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+nav > a {
+  display: inline-block;
+  height: 100px;
+}
+
+nav > a, li {
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  height: 100px;
+
+  font-size: 24px;
+  color: black;
+  border-radius: 4px;
+}
+
+nav > a:hover, li:hover {
+  background-color: #dcd7d3;
+
+}
+
+@media only screen and (max-width: 550px) {
+  nav > a, li { 
+    height: 50px;
+    font-size: 16px;
+  }
+  ul {
+    margin: 0 20px 0 0;
+  }
 }
