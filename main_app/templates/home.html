@@ -1,23 +1,30 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+{% endblock  %}
 
 {% block content %}
 
-<h1>Catch-a-Dream</h1>
-<hr />
-<p class="page-content">
-  Log your dreams before you forget them
-</p>
-
-{% if not user.is_authenticated %}
-  <section>
-    <form action="{% url 'home' %}" method="post" class="login">
+<section class="home-page">
+  <div class="app-info">
+    <h1>Catch-a-Dream</h1>
+    <hr />
+    <p> Log your dreams before you forget them</p>
+  </div>
+  
+  {% if not user.is_authenticated %}
+  <div class="form-container">
       <h1>Login</h1>
-      {% csrf_token %}
-      {{ form.as_p }}
-      <input type="hidden" name="next" value="{{ next }}">
-      <button type="submit" class="btn submit">Login</button>
-    </form>
-  </section>
-{% endif %}
+      <form action="{% url 'home' %}" method="post" class="django-form">
+        {% csrf_token %}
+        {{ form }}
+        <input type="hidden" name="next" value="{{ next }}">
+        <button type="submit" class="btn submit">Login</button>
+      </form>
+    </div>
+  {% endif %}
+</section>
 
 {% endblock %}

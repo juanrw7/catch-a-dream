@@ -18,7 +18,7 @@
 .dream-details > h1 {
   font-size: 30px;
   margin: 35px 0 20px 0;
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid goldenrod;
 }
 
 .dream-details > h2 {
@@ -34,13 +34,14 @@
 
 .dream-actions {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   margin-top: 35px;
 }
 
 .dream-actions > a {
-  width: 80px;
+  width: 100%;
   padding: 4px 0;
   border-radius: 4px;
   font-size: 18px;
@@ -50,14 +51,14 @@
   /* background-color: #d6ccc2; */
   border: 2px solid rgba(0, 0, 0, 0.268);
   text-align: center;
-
-  margin-right: 20px;
-  margin-left: 20px;
+  
+  margin: 10px 20px;
 }
 
 
 .dream-actions > a:hover { 
   background-color: white;
+  border: 2px solid goldenrod;
 }
 
 

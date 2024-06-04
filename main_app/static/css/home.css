@@ -1,17 +1,31 @@
-.form-page {
+.home-page {
   margin-top: 200px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.form-container {
+.app-info {
   width: 50%;
-  max-width: 750px;
+  /* min-width: 556px; */
+  padding: 0 10px;
+}
+
+.app-info > h1 {
+  font-size: 78px;
+  margin: 0;
+}
+
+.app-info > p {
+  font-size: 32px;
+  margin-top: 15px;
 }
 
 .form-container {
+  width: 35%;
+  /* min-width: 390px; */
+  max-width: 750px;
   padding: 25px;
   border-radius: 4px;
   box-shadow: 0 0 5px black;
@@ -31,9 +45,9 @@
   width: 100%;
 }
 
-.form-container > form > input, textarea, label, select { 
+.form-container > form > input, label { 
   font-size: 20px;
-  width: 75%;
+  width: 100%;
 }
 
 .form-container > form > label {
@@ -43,21 +57,15 @@
   font-size: 24px;
 }
 
-.form-container > form > textarea, input, select{
+.form-container > form > input{
   padding: 6px 4px 6px 6px;
-}
-
-.form-container > form > textarea{
-  min-width: 75%;
-  max-width: 85%;
-  max-height: 300px;
 }
 
 .btn {
   font-size: 24px;
   margin-top: 40px;
   margin-bottom: 15px;
-  width: 75%;
+  width: 100%;
   padding: 6px 0;
   background-color: #d6ccc2;
   border: 2px solid black;
@@ -69,18 +77,22 @@
 }
 
 
-@media only screen and (max-width: 550px) { 
-
-  .form-container {
+@media only screen and (max-width: 580px) { 
+  .form-container, .app-info {
     width: 80%;
+    min-width: none;
   }
-  .form-container > form > input, textarea, label, select { 
+  .form-container > form > input, label { 
     font-size: 20px;
     width: 95%;
   }
-
-  .form-container > form > textarea{
-    max-width: 95%;
+  .app-info {
+    margin-right: 50px;
   }
-
+  .app-info > h1 {
+    font-size: 42px;
+  }
+  .app-info > p {
+    font-size: 24px;
+  }
 }
