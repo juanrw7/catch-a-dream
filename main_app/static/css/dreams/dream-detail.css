@@ -12,7 +12,7 @@
   padding: 25px;
   background-color: #dcd7d3;
   border-radius: 4px;
-  box-shadow: 0 0 15px  #dcd7d3;
+  box-shadow: 0 0 5px black;
 }
 
 .dream-details > h1 {
@@ -48,7 +48,6 @@
   font-weight: 500;
   background-color: #f5ebe0;
 
-  /* background-color: #d6ccc2; */
   border: 2px solid rgba(0, 0, 0, 0.268);
   text-align: center;
   

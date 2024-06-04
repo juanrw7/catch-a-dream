@@ -1,23 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+{% endblock  %}
+
 {% block content %}
 
-<div class="page-header">
-  <h1>Forget Dream?</h1>
-
+<div class="confirmation-page">
+  <div class="form-container">
+    <h1>Forget Dream?</h1>
+  
+    <h2>Are you sure you want to forget:</h2>
+    <h2 class="title">{{dream.title}}</h2>
+    
+      <form action="" method="post" class="django-form">
+        {% csrf_token %}
+        <a 
+        href="{% url 'dream-detail' dream.id %}" 
+        class="btn"
+        >
+        Cancel
+      </a>
+      <button type="submit" class="btn danger">Forget Dream</button>
+    </form>
+  </div>
 </div>
-<h2>Are you sure you want to forget when {{dream.title}}?</h2>
 
-<form action="" method="post" class="form">
-  {% csrf_token %}
-  <a 
-    href="{% url 'dream-detail' dream.id %}" 
-    class="btn secondary"
-  >
-    Cancel
-  </a>
-  <button type="submit" class="btn danger">Forget Dream</button>
-</form>
 
 {% endblock %}

@@ -24,6 +24,7 @@
 }
 
 .form-container > form {
+  font-family: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,12 +49,15 @@
 }
 
 .form-container > form > textarea{
+  font-family: inherit;
   min-width: 75%;
-  max-width: 85%;
+  max-width: 75%;
+  min-height: 100px;
   max-height: 300px;
 }
 
 .btn {
+  font-family: inherit;
   font-size: 24px;
   margin-top: 40px;
   margin-bottom: 15px;
@@ -81,6 +85,8 @@
 
   .form-container > form > textarea{
     max-width: 95%;
+    min-width: 95%;
+
   }
 
 }
