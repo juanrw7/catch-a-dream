@@ -20,21 +20,24 @@
 
 {% block content %}
 
-<div class="page-header">
-  {% if object %}
-    <h1>Edit Your Dream</h1>
-  {% else %}
-    <h1>Log Your Dream</h1>
-  {% endif %}
+<section class="form-page">
+  
+  <div class="form-container">
+    {% if object %}
+      <h1>Edit Your Dream</h1>
+    {% else %}
+      <h1>Log Your Dream</h1>
+    {% endif %}
 
-</div>
-
-<form action="" method="post" class="form-container">
-  {% csrf_token %}
-  <table>
-    {{ form.as_table }}
-  </table>
-  <button type="submit" class="btn submit">Add</button>
-</form>
+    <form action="" method="post" class="django-form">
+      {% csrf_token %}
+      {{ form }}
+      {% comment %} <table>
+        {{ form.as_table }}
+      </table> {% endcomment %}
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</section>
 
 {% endblock %}
