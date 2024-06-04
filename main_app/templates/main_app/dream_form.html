@@ -32,9 +32,6 @@
     <form action="" method="post" class="django-form">
       {% csrf_token %}
       {{ form }}
-      {% comment %} <table>
-        {{ form.as_table }}
-      </table> {% endcomment %}
       <button type="submit" class="btn">Submit</button>
     </form>
   </div>
